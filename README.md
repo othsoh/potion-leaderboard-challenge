@@ -1,5 +1,7 @@
 # Potion Leaderboard
 
+[Live Demo](https://potion-leaderboard-tau.vercel.app/)
+
 Potion Leaderboard is a comprehensive dashboard application designed to track and display cryptocurrency trading performance metrics for individual traders and groups. Built with Next.js and React, it provides real-time insights into trading activities, portfolio performance, and market trends.
 
 ---
@@ -159,19 +161,20 @@ Node.js (v16+)
 npm or yarn
 
 ### Installation
-1.Clone the repository:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/your-username/potion-leaderboard.git
 ```
-2.Install dependencies:
+2. Install dependencies:
 
 ```bash
 npm install
 ```
-3.Run the development server:
+3. Run the development server:
 
 ```bash
 npm run dev
 ```
 Open http://localhost:3000 in your browser.
+
