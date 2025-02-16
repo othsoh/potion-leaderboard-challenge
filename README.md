@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Potion Leaderboard
 
-## Getting Started
+Potion Leaderboard is a comprehensive dashboard application designed to track and display cryptocurrency trading performance metrics for individual traders and groups. Built with Next.js and React, it provides real-time insights into trading activities, portfolio performance, and market trends.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 1. **Trader Profiles**
+   - View detailed profiles of top traders
+   - Display key metrics:
+     - Total trades
+     - Win rate
+     - Average buy/sell prices
+     - Realized PNL (Profit and Loss)
+     - ROI (Return on Investment)
+   - Showcase traded tokens and portfolios
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 2. **Leaderboard**
+   - Rank traders based on performance metrics
+   - Sort by:
+     - Total PNL
+     - ROI
+     - Number of trades
+     - Win rate
+   - Filter by timeframes (Daily, Weekly, Monthly, All-Time)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. **Trade Analytics**
+   - Detailed breakdown of individual trades:
+     - Token information
+     - Market cap (MC)
+     - Investment details
+     - Holding duration
+     - Entry/exit prices
+   - Visualize trade performance over time
 
-## Learn More
+### 4. **Search and Filter**
+   - Search traders by:
+     - Name
+     - Wallet address
+     - Token holdings
+   - Filter trades by:
+     - Token
+     - Timeframe
+     - Profitability
 
-To learn more about Next.js, take a look at the following resources:
+### 5. **Responsive Design**
+   - Optimized for desktop and mobile devices
+   - Interactive tables with sorting and pagination
+   - Dark mode support
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
+### Frontend
+- **Framework**: Next.js
+- **UI Library**: React
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide Icons
+- **Data Visualization**: Custom components
+- **State Management**: React hooks (useState, useEffect)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Backend
+- **Data Source**: Mock data (JSON)
+- **API**: Next.js API routes (optional for future integration)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Tools
+- **Image Optimization**: Next.js Image component
+- **Formatting**: Intl.NumberFormat for currency
+- **Routing**: Next.js dynamic routes
+
+---
+
+## Data Structure
+
+### Users
+```javascript
+{
+  id: number,
+  rank: number,
+  xHandle: string,
+  walletAddress: string,
+  profilePicture: string,
+  followers: number,
+  totalTrades: number,
+  successfulTrades: number,
+  winRate: string,
+  avgBuy: { sol: number, usd: number },
+  avgEntry: number,
+  avgHold: string,
+  realizedPNL: { sol: number, usd: number },
+  socialsUsername: string,
+  tokens: Token[],
+  trades: number[] // Trade IDs
+}
