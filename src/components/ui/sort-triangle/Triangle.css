@@ -1,0 +1,17 @@
+.triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #AA00FF;
+  transition: transform 0.5s;
+}
+
+@media (max-width: 1024px) {
+  .triangle {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #AA00FF;
+  }
+}
