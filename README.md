@@ -74,7 +74,7 @@ Potion Leaderboard is a comprehensive dashboard application designed to track an
 
 ## Data Structure
 
-### Users
+### Users (Traders)
 ```javascript
 {
   id: number,
@@ -94,3 +94,31 @@ Potion Leaderboard is a comprehensive dashboard application designed to track an
   tokens: Token[],
   trades: number[] // Trade IDs
 }
+```
+### Trades
+```javascript
+{
+  id: number,
+  userId: number,
+  token: Token,
+  lastTrade: string,
+  mc: number,
+  invested: { sol: number, usd: number },
+  realizedPNL: { sol: number, usd: number },
+  roi: string,
+  trades: { successfulTrades: number, total: number },
+  holding: { sol: number, usd: number },
+  avgBuy: number,
+  avgSell: number,
+  held: string
+}
+```
+### Tokens
+```javascript
+{
+  name: string,
+  code: string,
+  address: string,
+  image: string
+}
+```
