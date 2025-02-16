@@ -122,3 +122,56 @@ Potion Leaderboard is a comprehensive dashboard application designed to track an
   image: string
 }
 ```
+## Key Components
+### 1. LeaderboardTable
+Displays ranked list of traders
+
+Supports sorting and filtering
+
+Responsive design for all screen sizes
+
+### 2. UserProfile
+Shows detailed trader information
+
+Includes social media links and stats
+
+### 3. SearchAndFilter
+Unified search and filter component
+
+Real-time results as you type
+
+Clear filters button
+
+### 4. StatsOverview
+Summary of key trading metrics
+
+Visual representation of performance
+
+### 5. TimeframeSelector
+Switch between different time periods
+
+Updates data dynamically
+
+## Getting Started
+### Prerequisites
+Node.js (v16+)
+
+npm or yarn
+
+### Installation
+1.Clone the repository:
+
+```bash
+git clone https://github.com/your-username/potion-leaderboard.git
+```
+2.Install dependencies:
+
+```bash
+npm install
+```
+3.Run the development server:
+
+```bash
+npm run dev
+```
+Open http://localhost:3000 in your browser.
